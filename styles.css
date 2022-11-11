@@ -1,0 +1,287 @@
+/*  VARIABLES    */
+:root {
+    /* Colors */
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-strong-cyan: hsl(172, 70%, 70%);
+    --dull-cyan: hsl(183, 100%, 20%);
+    --dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --form-input-font-size: 24px;
+
+    --space-mono-font: 'Space Mono',san-serif;
+    --fw-700: 700;
+}
+/*                      MOBILE FIRST WORKFLOW                */
+
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: var(--space-mono-font);
+}
+::placeholder {
+    color: var(--grayish-cyan);
+}
+
+/* Header */
+header {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   background-color: var(--light-grayish-cyan);
+   padding: 1rem;
+}
+
+.logo-container {
+    margin: 1rem;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    background-color: var(--light-grayish-cyan);
+}
+
+/*  OUTER CONTAINER */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    justify-content: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+/* FORM */
+
+label {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+/* All form headings */
+.heading {
+    font-size: 15px;
+    color: var(--dark-grayish-cyan);
+}
+
+.input-field {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    background-color: var(--very-light-grayish-cyan);
+    padding: 0.5rem;
+    margin: 0rem 1px 0.5rem;
+    border-radius: 5px;
+}
+
+.form-input{
+    width: 100%;
+    text-indent: 1rem;
+    margin: auto 0 auto 1rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--dark-cyan);
+    font-size: var(--form-input-font-size);
+    font-weight: var(--fw-700);
+    text-align: end;
+    
+
+}
+.input-heading{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* ERROR MESSAGE */
+.error{
+    border: 2px solid indianred;
+}
+.error-text{
+    color: indianred;
+    visibility: hidden;
+}
+
+
+
+/* Placing the dollar sign inside the input field  */
+.icon {
+    position: absolute;
+}
+
+
+/* Tip Buttons Section */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn {
+    width: 45%;
+    max-width: 15rem;
+    height: 3rem;
+    text-align: center;
+    font-size: var(--form-input-font-size);
+    font-weight: var(--fw-700);
+    margin: 0.5rem;
+    padding: 0.2rem;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+
+}
+.active-btn 
+{
+    color: var(--dark-cyan);
+    background-color: var(--strong-cyan);
+}
+
+#custom {
+    width: 45%;
+    max-width: 15rem;
+    outline: none;
+    border: none;
+    height: 3rem;
+    font-size: var(--form-input-font-size);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: end;
+    color: var(--dark-cyan);
+    font-weight: var(--fw-700);
+}
+
+/* Output */
+.output-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 1rem;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border-radius: 15px;
+
+}
+.output-section {
+    margin-bottom: 1rem;
+    display: flex;
+}
+.output-section p {
+    font-weight: var(--fw-700);
+}
+
+.per-person {
+    color: var(--grayish-cyan);
+}
+
+.output {
+    display: inline-block;
+    width: auto;
+    font-size: var(--form-input-font-size);
+    font-weight: var(--fw-700);
+    margin-left: auto;
+    color: var(--strong-cyan);
+}
+
+
+
+
+/* RESET BUTTON */
+#reset {
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+    font-size: var(--form-input-font-size);
+    font-weight: var(--fw-700);
+    color: var(--dark-cyan);
+    background-color: var(--strong-cyan);
+    border-radius: 5px;
+    border: none;
+    margin-top: 0.5rem;
+    align-self: center;
+    
+}
+
+/* DESKTOP DESIGNS */
+@media (min-width: 750px)
+{
+    body {
+        background-color: var(--light-grayish-cyan);
+    }
+    main {
+        padding: 1rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        max-width: 80%;
+        padding: 2rem;
+        margin: 1rem auto;
+        border-radius: 15px;
+    }
+
+    .output-container {
+        padding-top: 2rem;
+        margin-left: 1rem;
+        width: 500px;
+    }
+
+    #reset {
+        margin-top: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/*  ACTIVE STATES */
+.input-field:active {
+    border: 2px solid var(--strong-cyan);
+}
+.input-field:hover {
+    cursor: pointer;
+}
+.btn:hover {
+    color: var(--dark-cyan);
+    background-color: var(--strong-cyan);
+}
+
+#reset:enabled {
+    background-color: var(--strong-cyan);
+}
+
+#reset:active {
+    background-color: var(--very-strong-cyan);
+    cursor: pointer;
+}
+
+#reset:disabled {
+    background-color: var(--dull-cyan);
+}
+
+#custom:focus {
+    border: 1px solid var(--strong-cyan);
+}
+
+
+
+
+/* ATTRIBUTION */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
